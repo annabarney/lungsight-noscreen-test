@@ -1,0 +1,1 @@
+rules_version='2';service firebase.storage{match /b/{bucket}/o{match /sessions/{sid}/{file}{allow read:if false;allow write:if request.auth!=null&&request.auth.token.role=='participant'&&request.auth.token.sessionId==sid&&(file=='recording.webm'||file=='recording.mp4')&&request.resource.size<300*1024*1024&&request.resource.contentType.matches('video/(webm|mp4)');}}}
