@@ -1,1 +1,41 @@
-<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>LungSight recording</title><link rel="stylesheet" href="styles.css"></head><body><a class="skip" href="#main">Skip to main content</a><div class="container"><section class="display-controls" aria-label="Display settings"><label>Font size<select id="font-size"><option value="16px">Small</option><option value="18px" selected>Medium</option><option value="22px">Large</option><option value="26px">Extra large</option></select></label><label>Font colour<input id="font-colour" type="color" value="#172033"></label><label>Background colour<input id="background-colour" type="color" value="#ffffff"></label><button id="reset-display" type="button">Reset</button></section><p id="display-message" class="status error" role="status" aria-live="polite"></p><img src="images/lungsight-header.png" class="study-header" alt="LungSight"><main id="main"><h1>Record your data</h1><div id="guard" class="step"><p id="guard-status" class="status">Checking questionnaire and consent status…</p></div><div id="recorder" hidden><div class="video-wrap"><video id="preview" autoplay muted playsinline></video></div><p><button id="camera" class="button" type="button">Set up camera and microphone</button></p><div class="controls"><button id="start" class="button" disabled>Start recording</button><button id="finish" class="button" disabled>Finish and upload</button></div><p id="record-status" class="status"></p></div></main></div><script src="display-settings.js"></script><script type="module" src="recorder.js"></script></body></html>
+<!doctype html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>LungSight recording</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body><a class="skip" href="#main">Skip to main content</a>
+    <div class="container">
+        <section class="display-controls" aria-label="Display settings"><label>Font size<select id="font-size">
+                    <option value="16px">Small</option>
+                    <option value="18px" selected>Medium</option>
+                    <option value="22px">Large</option>
+                    <option value="26px">Extra large</option>
+                </select></label><label>Font colour<input id="font-colour" type="color"
+                    value="#172033"></label><label>Background colour<input id="background-colour" type="color"
+                    value="#ffffff"></label><button id="reset-display" type="button">Reset</button></section>
+        <p id="display-message" class="status error" role="status" aria-live="polite"></p><img
+            src="images/lungsight-header.png" class="study-header" alt="LungSight">
+        <main id="main">
+            <h1>Record your data</h1>
+            <div id="guard" class="step">
+                <p id="guard-status" class="status">Checking questionnaire and consent status…</p>
+            </div>
+            <div id="recorder" hidden>
+                <div class="video-wrap"><video id="preview" autoplay muted playsinline></video></div>
+                <p><button id="camera" class="button" type="button">Set up camera and microphone</button></p>
+                <div class="controls"><button id="start" class="button" disabled>Start recording</button><button
+                        id="finish" class="button" disabled>Finish and upload</button></div>
+                <p id="record-status" class="status"></p>
+            </div>
+        </main>
+    </div>
+    <script src="display-settings.js"></script>
+    <script type="module" src="recorder.js"></script>
+</body>
+
+</html>
