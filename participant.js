@@ -42,7 +42,7 @@ questionnaireContainer.hidden=false;
 
 questionnaireContainer.innerHTML='<iframe src="'+questionnaire.href+'" title="LungSight questionnaire and consent" style="width:100%;height:800px;border:0;"></iframe>';
 
-questionnaire.hidden=true;
+questionnaire.style.display='none';
 
 };
 check.onclick=()=>checkStatus(true);init();
